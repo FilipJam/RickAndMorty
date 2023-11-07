@@ -1,0 +1,50 @@
+<div class="page_container">
+    <div>
+        
+        <% if(page > 1) { %>
+            <form class="page-button" action="/character" method="GET">
+                <input type="hidden" name="page" value="1">
+                <button type="submit" class="page-button fs-4">&#8804;</button>
+            </form>
+            <form class="page-button" action="/character" method="GET">
+                <input type="hidden" name="page" value="<%= page-1 %>">
+                <button type="submit" class="page-button fs-4">&lt;</button>
+            </form>
+        <% } %>
+
+        <% 
+            var start = 1;
+            var end = 5;
+            if(page > info.pages - 2) {
+                start = info.pages - 5;
+                end = info.pages;
+            }else if(page > 2) {
+                start = page-2;
+                end = page+2;
+            }
+        %>
+
+        <% for(let i = start; i <= end; i++) { %>
+        <form class="page-button" action="/character" method="GET">
+            <input type="hidden" name="page" value="<%= i %>">
+            <% let classActive = "" %>
+            <% if(i == page) classActive = " active"%>
+            <input class="page-button<%= classActive %>" type="submit" value="<%= i %>">
+        </form>
+
+        <% } %>
+
+        <% if(page < info.pages-1) { %>
+            <form class="page-button" action="/character" method="GET">
+                <input type="hidden" name="page" value="<%= page+1 %>">
+                <button type="submit" class="page-button fs-4">&gt;</button>
+            </form>
+            <form class="page-button" action="/character" method="GET">
+                <input type="hidden" name="page" value="<%= info.pages %>">
+                <button type="submit" class="page-button fs-4">&#8805;</button>
+            </form>
+        <% } %>
+        
+        
+    </div>
+</div>

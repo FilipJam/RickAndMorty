@@ -1,0 +1,124 @@
+html {
+    font-size: 1rem;
+    --page-backcolor: rgb(116, 235, 4);
+}
+
+body {
+    background-color: #3c3c3c;
+    color: white;
+    margin: 0 10% 0 10%;
+}
+
+/* #sidebar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 98vh;
+}
+
+#sidebar-image {
+    width: 250px;
+    border: 1px solid red;
+} */
+
+.card-image {
+    float: left;
+}
+
+.card-body {
+    float: right;
+}
+
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.page-button {
+    background-color: #575757;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    /* box-shadow: -1px 1px 3px black; */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 50px;
+    height: 40px;
+    transition: .15s ease-in;
+}
+
+.active {
+    background-color: rgb(255, 242, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.page-button:hover {
+    background-color: var(--page-backcolor);
+    box-shadow: 0 0 5px var(--page-backcolor);
+    color: white;
+    cursor: pointer;
+}
+
+.page-button.active:hover {
+    background-color: rgb(210, 238, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.page_container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    width: 100%;
+}
+
+.status-alive {
+    background-color: green;
+}
+
+.status-dead {
+    background-color: red;
+}
+
+.status-unknown {
+    background-color: rgb(255, 206, 47);
+}
+
+.top-bar {
+    display: flex;
+    background-color: #fff9f7;
+
+}
+
+.top-bar li {
+    list-style: none;
+    font-weight: bold;
+}
+
+.top-bar a {
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    transition: .15s ease-in;
+}
+
+.top-bar a:hover {
+    color: deepskyblue;
+    
+}
+
+.backcolor-white {
+    background-color: white;
+}
+
+@media screen and (max-width: 650px) {
+    .page-button {
+        width: 40px;
+        font-size: 1rem;
+    }
+}
