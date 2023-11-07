@@ -16,3 +16,8 @@ or if you don't have nodemon installed, use
 ```
 node index.js
 ```
+
+if all goes well you should get this message
+```
+Server running on port 3000
+```
