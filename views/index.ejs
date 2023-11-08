@@ -60,20 +60,20 @@
   <!-- <div class="container-fluid"> -->
     <div class="row">
       <div class="col-12 mx-0">
-        <nav>
+        <!-- <nav>
           <ul class="top-bar">
               <a href="#"><li>Home</li></a>
               <a href="#"><li>Prices</li></a>
               <a href="#"><li>About</li></a>
               <a href="#"><li>Contact</li></a>
           </ul>
-        </nav>
-        <h1>Welcome to my Rick and Morty API</h1>
-        <form method="GET">
+        </nav> -->
+        <h1><a href="/">Rick and Morty Characters</a></h1>
+        <!-- <form method="GET">
             <input type="submit" formaction="/character" value="Characters">
             <input type="submit" formaction="/location" value="Locations">
             <input type="submit" formaction="/episode" value="Episodes">
-        </form>
+        </form> -->
         
         
 
@@ -138,7 +138,7 @@
             
 
         <% } else if(locals.error) { %>
-            <p><%= error %></p>
+            <p style="text-align: center;"><%= error %></p>
         <% } %>
       </div>
     </div>

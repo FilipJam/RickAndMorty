@@ -44,7 +44,7 @@ const endPoint = {
 }
 
 app.get("/", async (req,res) => {
-    res.render(ejsMain);
+    res.redirect("/character");
 });
 
 app.get("/character", async (req,res) => {
